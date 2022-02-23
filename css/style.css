@@ -169,6 +169,26 @@ nav {
   background-repeat: no-repeat;
   background-position: 0% 85%;
 }
+/* medicine */
+.medicine .card h6 {
+  color: var(--btn-color);
+}
+.medicine .card-body p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 12px;
+}
+.medicine .card-body img {
+  max-width: 51px;
+  margin-bottom: 30px;
+}
+/* service */
+.service .service-list .list p {
+  margin: 0 0 0 5px !important;
+}
+.service .service-list .list .p-c {
+  color: var(--btn-color);
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -246,12 +266,28 @@ nav {
   .vedio-cons-img img {
     width: 450px;
   }
+  /* medicine */
+  .medicine .card {
+    margin-top: 15px;
+  }
+  /* sefrvices */
+  .service-text {
+    font-size: 12px;
+
+    margin-top: 210px !important;
+  }
+  .service p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .hero-banner {
     background-position: 0% 0%, 65px 112%;
     padding-bottom: 100px !important;
+  }
+  .hero-btn {
+    text-align: center;
   }
 
   /* about */
@@ -283,6 +319,26 @@ nav {
     left: -10px;
     max-width: 550px;
   }
+  /* medicine */
+  .medicine .card {
+    margin-top: 15px;
+  }
+  /* sefrvices */
+  .service-text {
+    font-size: 12px;
+
+    margin-top: 40px !important;
+  }
+  .service p {
+    font-size: 12px;
+    padding: 0 !important;
+  }
+  .service-text .ser-btn {
+    text-align: center;
+  }
+  .service-text .service-list {
+    margin-left: 150px;
+  }
 }
 @media screen and (max-width: 575px) {
   /* about */
@@ -305,10 +361,18 @@ nav {
   .vedio-cons-img img {
     width: 450px;
   }
+  /* medicine */
+  .medicine .card {
+    margin-top: 15px;
+  }
 }
 @media screen and (max-width: 475px) {
   /* herobanner */
   .image {
     display: flex;
+  }
+  /* medicine */
+  .medicine .card {
+    margin-top: 15px;
   }
 }
