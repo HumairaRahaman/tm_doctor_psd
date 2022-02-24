@@ -9,7 +9,7 @@
   --clr-primary-3: hsl(205, 72%, 37%);
   --clr-primary-4: hsl(205, 63%, 48%);
   /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-primary-5: #6e6fd7;
   /* lighter shades of primary color */
   --clr-primary-6: hsl(205, 89%, 70%);
   --clr-primary-7: hsl(205, 90%, 76%);
@@ -110,6 +110,11 @@ p {
 
   margin-bottom: 30px;
 }
+.btn:hover {
+  color: #fff;
+  background-color: var(--clr-primary-5);
+  border: 1px solid var(--clr-primary-5);
+}
 .log-btn {
   border-radius: 30px;
   color: #fff;
@@ -117,6 +122,11 @@ p {
   border: 1px solid var(--btn-color);
   padding: 1px 40px;
   margin: 5px 0;
+}
+.log-btn:hover {
+  color: #fff;
+  background-color: var(--clr-primary-5);
+  border: 1px solid var(--clr-primary-5);
 }
 /* navbar */
 nav {
@@ -289,6 +299,11 @@ nav {
   margin: 5px 0 5px 5px;
   display: inline-table;
 }
+.blogs .blog-body .card-footer .blog-btn:hover {
+  color: #fff;
+  background-color: var(--clr-primary-5);
+  border: 1px solid var(--clr-primary-5);
+}
 .blogs .blog-body .card-footer .color-p {
   font-size: 12px;
 }
@@ -363,12 +378,15 @@ footer {
 }
 .fot-brand .expart-list .contact-list .list img {
   margin-right: 10px;
+  cursor: pointer;
 }
+
 .fot-brand .foot-ser-card {
   margin-top: 50px;
 }
 .fot-brand .foot-ser-card .fot-brand-img img {
   margin: 10px 5px 0 5px;
+  cursor: pointer;
 }
 .fot-brand .foot-ser-card.foot-social {
   margin-left: 90px;
