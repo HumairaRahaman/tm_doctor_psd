@@ -189,6 +189,17 @@ nav {
 .service .service-list .list .p-c {
   color: var(--btn-color);
 }
+/* expart */
+.expart .expart-list .list p {
+  margin: 0 0 10px 5px !important;
+}
+/* qulified */
+.qulified {
+  background-image: url(../images/qulified-bg.png);
+  background-repeat: no-repeat;
+  background-position: 100% 115%;
+  padding-bottom: 70px !important;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -274,10 +285,23 @@ nav {
   .service-text {
     font-size: 12px;
 
-    margin-top: 210px !important;
+    margin-top: 40px !important;
   }
   .service p {
     font-size: 12px;
+  }
+  /* expart */
+  .expart .expart-card {
+    margin-bottom: 10px;
+    margin-left: 100px;
+  }
+  /* qulified */
+  .qulified {
+    background-image: url(../images/qulified-bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 95%;
+    background-size: 450px 350px;
+    padding-bottom: 0px !important;
   }
 }
 
@@ -339,6 +363,22 @@ nav {
   .service-text .service-list {
     margin-left: 150px;
   }
+  /* expart */
+  .expart .expart-card {
+    margin-bottom: 70px;
+    margin-left: 40px;
+  }
+  .expart .expart-card .expart-list .list p {
+    margin-left: 5px !important;
+  }
+  /* qulified */
+  .qulified {
+    background-image: url(../images/qulified-bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 113%;
+    background-size: 700px 536px;
+    padding-bottom: 0px !important;
+  }
 }
 @media screen and (max-width: 575px) {
   /* about */
@@ -355,8 +395,8 @@ nav {
   }
   /* vedio-cons */
   .vedio-cons {
-    background-position: 115% 70%;
-    background-size: 550px 515px;
+    background-position: 115% 100%;
+    background-size: 500px 400px;
   }
   .vedio-cons-img img {
     width: 450px;
@@ -364,6 +404,28 @@ nav {
   /* medicine */
   .medicine .card {
     margin-top: 15px;
+  }
+  /* expart */
+  .expart {
+    overflow: hidden;
+  }
+  .expart .expart-card {
+    margin-left: 151px;
+  }
+  /* qulified */
+  .qulified {
+    background-image: url(../images/qulified-bg.png);
+    background-repeat: no-repeat;
+    background-position: -95% 105%;
+    background-size: 600px 400px;
+    padding-bottom: 40px !important;
+    margin-top: 0 !important;
+  }
+  .qulified .qulified-text {
+    text-align: center;
+  }
+  .qulified .qulified-text p {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 475px) {
