@@ -200,6 +200,36 @@ nav {
   background-position: 100% 115%;
   padding-bottom: 70px !important;
 }
+/* faq */
+.faq {
+  background-image: url(../images/faq-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 90%;
+}
+
+.faq .faq-text .accordion-item {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+.faq .faq-text .faq-btn {
+  text-align: right;
+  margin-top: 30px;
+}
+.accordion-item {
+  background-color: #fff;
+  border: 0px solid rgba(0, 0, 0, 0.125);
+}
+.accordion-button:not(.collapsed) {
+  color: var(--text-color);
+  background-color: #ffffff;
+  box-shadow: none;
+}
+.accordion-button::after {
+  background-image: url("../images/faq-p.svg");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../images/faq-m.svg");
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -303,6 +333,10 @@ nav {
     background-size: 450px 350px;
     padding-bottom: 0px !important;
   }
+  /* faq */
+  .faq {
+    background-position: -20% 80%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -379,6 +413,10 @@ nav {
     background-size: 700px 536px;
     padding-bottom: 0px !important;
   }
+  /* faq */
+  .faq {
+    background-position: -15% 20%;
+  }
 }
 @media screen and (max-width: 575px) {
   /* about */
@@ -427,6 +465,10 @@ nav {
   .qulified .qulified-text p {
     font-size: 12px;
   }
+  /* faq */
+  .faq {
+    background-position: -190% 25%;
+  }
 }
 @media screen and (max-width: 475px) {
   /* herobanner */
@@ -436,5 +478,10 @@ nav {
   /* medicine */
   .medicine .card {
     margin-top: 15px;
+  }
+  /* faq */
+  .faq {
+    background-position: -50% 32%;
+    background-size: 400px 300px;
   }
 }
