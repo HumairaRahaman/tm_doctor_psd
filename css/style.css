@@ -278,6 +278,42 @@ nav {
 .patient .patient-body .card-body .card-text p {
   margin-top: 30px;
 }
+/* blog */
+.blogs .blog-body .card-footer .blog-btn {
+  font-size: 13px;
+  border-radius: 62px;
+  color: #fff;
+  background-color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  padding: 6px 30px;
+  margin: 5px 0 5px 12px;
+  display: inline-table;
+}
+.blogs .blog-body .card-footer p {
+  margin-bottom: 0;
+}
+.blogs .blog-body .card-body .color-p,
+.blogs .blog-body .card-footer .color-p {
+  color: var(--btn-color);
+}
+.blogs .blog-body .card {
+  border: none;
+  padding: 15px;
+}
+.blogs .blog-body .card-footer {
+  padding: 0 !important;
+  background-color: #ffffff;
+  border-top: none;
+  margin-left: 15px;
+}
+.blogs-arrow {
+  position: relative;
+}
+.blogs .blogs-arrow .arro-btn {
+  position: absolute;
+  top: 40px;
+  left: 620px;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -387,6 +423,29 @@ nav {
     margin-top: 10px;
     font-size: 12px !important;
   }
+  /* blogs */
+  .blogs .blog-body .card-body {
+    padding: 2px;
+  }
+  .blogs .blog-body .card-footer p,
+  .blogs .blog-body .card-body p {
+    font-size: 10px;
+  }
+  .blogs .blog-body .card-body h6 {
+    font-size: 12px;
+  }
+  .blogs .blog-body .card-footer {
+    margin-left: 0;
+  }
+  .blogs .blog-body .card-footer .blog-btn {
+    font-size: 9px;
+    padding: 6px 20px;
+  }
+  .blogs .blogs-arrow .arro-btn {
+    position: absolute;
+    top: 20px;
+    left: 440px;
+  }
 }
 @media screen and (max-width: 991px) {
   .hero-banner {
@@ -495,6 +554,26 @@ nav {
     font-size: 12px;
     margin: 5px 0 0 0;
     font-weight: bold;
+  }
+  /* blogs */
+  .blogs .blog-body .card-body .color-p,
+  .blogs .blog-body .card-footer .color-p {
+    margin-right: 5px;
+    font-size: 8px !important;
+  }
+  .blogs .blog-body .card {
+    padding: 10px;
+  }
+  .blogs .blog-body .card-footer .blog-btn {
+    font-size: 8px !important;
+    padding: 6px 14px !important;
+    margin: 0;
+    display: inline-table;
+  }
+  .blogs .blogs-arrow .arro-btn {
+    position: absolute;
+    top: 20px;
+    left: 315px;
   }
 }
 
@@ -629,6 +708,40 @@ nav {
     margin: 15px 0px 15px 0px;
     font-weight: bold;
   }
+  /* blog */
+  .blogs .blog-body .card-group {
+    display: block;
+  }
+  .blogs .blog-body .card-group .card {
+    margin-bottom: 50px;
+  }
+  .blogs .blog-body .card-group .card-body {
+    padding: 10px;
+  }
+  .blogs .blog-body .card-group .card-footer .color-p,
+  .blogs .blog-body .card-group .card-body .color-p {
+    font-size: 20px !important;
+  }
+  .blogs .blog-body .card-group .card-footer .color-p {
+    margin-left: 10px;
+  }
+  .blogs .blog-body .card-group .card-body p {
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+  }
+  .blogs .blog-body .card-group .card-body h6 {
+    font-size: 25px;
+  }
+  .blogs .blog-body .card-footer .blog-btn {
+    font-size: 15px !important;
+    padding: 6px 40px !important;
+    margin: 0;
+    margin-left: 60px;
+    display: inline-table;
+  }
+  .blogs .blogs-arrow .arro-btn {
+    display: none;
+  }
 }
 @media screen and (max-width: 575px) {
   /* about */
@@ -724,6 +837,13 @@ nav {
     top: 610px;
     left: 295px;
   }
+  /* blogs */
+  .blogs .blog-body .card-footer p {
+    font-size: 5px !important;
+  }
+  .blogs .blog-body .card-footer .blog-btn {
+    margin-left: 15px;
+  }
 }
 @media screen and (max-width: 475px) {
   /* herobanner */
@@ -791,5 +911,12 @@ nav {
     font-size: 20px;
     margin: 15px 0px 15px 0px;
     font-weight: bold;
+  }
+  /* blogs */
+  .blogs .blog-body .card-footer .color-p {
+    font-size: 15px !important;
+  }
+  .blogs .blog-body .card-footer .blog-btn {
+    margin-left: 15px;
   }
 }
