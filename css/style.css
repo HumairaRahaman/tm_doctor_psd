@@ -248,9 +248,9 @@ nav {
 .patient {
   position: relative;
 }
-.patient .patient-body {
+/* .patient .patient-body {
   position: relative;
-}
+} */
 
 .patient .patient-body .card-body {
   max-width: 550px;
@@ -259,39 +259,63 @@ nav {
 .patient .qutant-img .up {
   position: absolute;
   top: 160px;
-  left: 650px;
+  left: 610px;
   z-index: 1;
 }
 .patient .qutant-img .down {
   position: absolute;
-  top: 350px;
-  left: 1060px;
+  top: 340px;
+  left: 980px;
   z-index: 1;
 }
 
-.patient .patient-body .patient-slide .first {
+/* slider */
+
+.slider-container {
+  width: 70vw;
+
+  height: 35vh;
+  max-width: 80rem;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+.slide {
   position: absolute;
-  top: 260px;
-  left: 870px;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
 }
-.patient .patient-body .patient-slide .sec {
-  position: absolute;
-  top: 260px;
-  left: 1000px;
+.slide-img {
+  height: 100%;
+  object-fit: cover;
 }
-.patient .patient-body .patient-slide .thi {
-  position: absolute;
-  top: 260px;
-  left: 1130px;
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
 }
-.patient .patient-body .patient-slide .arrow {
-  position: absolute;
-  top: 360px;
-  left: 1025px;
+.prevBtn,
+.nextBtn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.75rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
 }
-.patient .patient-body .card-body .card-text p {
-  margin-top: 30px;
+.prevBtn:hover,
+.nextBtn:hover {
+  color: var(--clr-grey-3);
 }
+/* slider */
+
 /* blog */
 .blogs .blog-body .card-footer .blog-btn {
   font-size: 10px;
@@ -430,25 +454,21 @@ footer .copyright p {
 }
 @media screen and (max-width: 1399px) {
   /* patient */
-  .patient .patient-body .patient-slide .first {
-    position: absolute;
-    top: 220px;
-    left: 750px;
+  /* .slider-container {
+    width: 79vw;
+    height: 48vh;
+  } */
+  .patient .qutant-img .up {
+    left: 540px;
   }
-  .patient .patient-body .patient-slide .sec {
-    position: absolute;
-    top: 220px;
-    left: 870px;
+  .patient .qutant-img .down {
+    top: 330px;
+    left: 880px;
   }
-  .patient .patient-body .patient-slide .thi {
-    position: absolute;
-    top: 220px;
-    left: 990px;
-  }
-  .patient .patient-body .patient-slide .arrow {
-    position: absolute;
-    top: 320px;
-    left: 895px;
+  /* slider */
+  .slider-container {
+    width: 80vw;
+    height: 34vh;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -480,36 +500,22 @@ footer .copyright p {
   .patient .qutant-img .up {
     position: absolute;
     top: 160px;
-    left: 500px;
+    left: 440px;
     z-index: 1;
   }
   .patient .qutant-img .down {
     position: absolute;
     top: 280px;
-    left: 870px;
+    left: 750px;
     z-index: 1;
   }
+  /* slider */
+  .slider-container {
+    width: 80vw;
+    height: 31vh;
+  }
+  /* slider */
 
-  .patient .patient-body .patient-slide .first {
-    position: absolute;
-    top: 180px;
-    left: 600px;
-  }
-  .patient .patient-body .patient-slide .sec {
-    position: absolute;
-    top: 180px;
-    left: 710px;
-  }
-  .patient .patient-body .patient-slide .thi {
-    position: absolute;
-    top: 180px;
-    left: 820px;
-  }
-  .patient .patient-body .patient-slide .arrow {
-    position: absolute;
-    top: 300px;
-    left: 735px;
-  }
   .patient .patient-body .card-body .card-text {
     margin-top: 10px;
     font-size: 12px !important;
@@ -627,41 +633,23 @@ footer .copyright p {
   }
   .patient .qutant-img .up {
     position: absolute;
-    top: 205px;
-    left: 390px;
+    top: 210px;
+    left: 400px;
     z-index: 1;
   }
   .patient .qutant-img .down {
     position: absolute;
-    top: 315px;
-    left: 700px;
+    top: 330px;
+    left: 690px;
     z-index: 1;
   }
 
-  .patient .patient-body .patient-slide .first {
-    position: absolute;
-    top: 130px;
-    left: 440px;
+  /* slide */
+  .slider-container {
+    width: 81vw;
+    height: 27vh;
   }
-
-  .patient .patient-body .patient-slide img {
-    max-width: 10%;
-  }
-  .patient .patient-body .patient-slide .sec {
-    position: absolute;
-    top: 130px;
-    left: 530px;
-  }
-  .patient .patient-body .patient-slide .thi {
-    position: absolute;
-    top: 130px;
-    left: 620px;
-  }
-  .patient .patient-body .patient-slide .arrow {
-    position: absolute;
-    top: 200px;
-    left: 530px;
-  }
+  /* slide */
   .patient .patient-body .card-body .card-text {
     margin: 0 !important;
     font-size: 12px !important;
@@ -706,6 +694,25 @@ footer .copyright p {
   }
   footer .copyright p {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .patient .qutant-img .up {
+    position: absolute;
+    top: 163px;
+    left: 310px;
+    z-index: 1;
+  }
+  .patient .qutant-img .down {
+    position: absolute;
+    top: 280px;
+    left: 620px;
+    z-index: 1;
+  }
+  /* slide */
+  .slider-container {
+    width: 81vw;
+    height: 25vh;
   }
 }
 
@@ -815,42 +822,24 @@ footer .copyright p {
     width: 100%;
   }
   .patient .qutant-img .up {
-    position: absolute;
-    top: 580px;
-    left: 135px;
-    z-index: 1;
+    top: 560px;
+    left: 145px;
   }
   .patient .qutant-img .down {
-    position: absolute;
-    top: 700px;
+    top: 720px;
     left: 440px;
-    z-index: 1;
   }
 
-  .patient .patient-body .patient-slide .first {
-    position: absolute;
-    top: 565px;
-    left: 230px;
+  /* slider */
+  .slider-container {
+    width: 66vw;
+    height: 90vh;
+    max-width: 80rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
   }
-
-  .patient .patient-body .patient-slide img {
-    max-width: 15%;
-  }
-  .patient .patient-body .patient-slide .sec {
-    position: absolute;
-    top: 565px;
-    left: 330px;
-  }
-  .patient .patient-body .patient-slide .thi {
-    position: absolute;
-    top: 565px;
-    left: 430px;
-  }
-  .patient .patient-body .patient-slide .arrow {
-    position: absolute;
-    top: 640px;
-    left: 340px;
-  }
+  /* slidrer */
   .patient .patient-body .card-body .card-text {
     margin: 20px 0 0 0 !important;
     font-size: 14px !important;
@@ -898,6 +887,17 @@ footer .copyright p {
     position: absolute;
     top: 0px;
     left: 260px;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* patient */
+  .patient .qutant-img .up {
+    top: 525px;
+    left: 145px;
+  }
+  .patient .qutant-img .down {
+    top: 720px;
+    left: 400px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -964,8 +964,8 @@ footer .copyright p {
   }
   .patient .qutant-img .up {
     position: absolute;
-    top: 585px;
-    left: 30px;
+    top: 475px;
+    left: 110px;
     z-index: 1;
   }
   .patient .qutant-img .down {
@@ -974,30 +974,20 @@ footer .copyright p {
     left: 350px;
     z-index: 1;
   }
-  .patient .patient-body .patient-slide .first {
-    position: absolute;
-    top: 555px;
-    left: 235px;
-  }
 
+  /* slider */
+  .slider-container {
+    width: 66vw;
+    height: 83vh;
+    max-width: 80rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
   .patient .patient-body .patient-slide img {
     max-width: 10%;
   }
-  .patient .patient-body .patient-slide .sec {
-    position: absolute;
-    top: 555px;
-    left: 300px;
-  }
-  .patient .patient-body .patient-slide .thi {
-    position: absolute;
-    top: 555px;
-    left: 370px;
-  }
-  .patient .patient-body .patient-slide .arrow {
-    position: absolute;
-    top: 610px;
-    left: 295px;
-  }
+
   /* blogs */
   .blogs .blog-body .card-footer p {
     font-size: 5px !important;
@@ -1034,8 +1024,8 @@ footer .copyright p {
   }
   .patient .qutant-img .up {
     position: absolute;
-    top: 540px;
-    left: 30px;
+    top: 480px;
+    left: 100px;
     z-index: 1;
   }
   .patient .qutant-img .down {
@@ -1045,16 +1035,16 @@ footer .copyright p {
     z-index: 1;
   }
 
-  .patient .patient-body .patient-slide .first {
+  /* .patient .patient-body .patient-slide .first {
     position: absolute;
     top: 540px;
     left: 235px;
-  }
+  } */
 
   .patient .patient-body .patient-slide img {
     max-width: 10%;
   }
-  .patient .patient-body .patient-slide .sec {
+  /* .patient .patient-body .patient-slide .sec {
     position: absolute;
     top: 540px;
     left: 295px;
@@ -1063,12 +1053,12 @@ footer .copyright p {
     position: absolute;
     top: 540px;
     left: 355px;
-  }
-  .patient .patient-body .patient-slide .arrow {
+  } */
+  /* .patient .patient-body .patient-slide .arrow {
     position: absolute;
     top: 595px;
     left: 295px;
-  }
+  } */
   .patient .patient-body .card-body .card-text {
     margin: 20px 0 0 0 !important;
     font-size: 14px !important;
