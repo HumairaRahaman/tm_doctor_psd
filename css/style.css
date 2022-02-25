@@ -160,7 +160,7 @@ nav {
 .about-img {
   position: relative;
   top: -10px;
-  left: -120px;
+  left: -180px;
   max-width: 550px;
 }
 /* vedio-cons */
@@ -202,6 +202,10 @@ nav {
 /* expart */
 .expart .expart-list .list p {
   margin: 0 0 10px 5px !important;
+}
+.expart .expart-card {
+  display: flex;
+  justify-content: center;
 }
 /* qulified */
 .qulified {
@@ -332,13 +336,12 @@ nav {
   border-top: none;
   margin-left: 20px;
 }
-.blogs-arrow {
-  position: relative;
-}
-.blogs .blogs-arrow .arro-btn {
-  position: absolute;
-  top: 40px;
-  left: 620px;
+
+.blogs .blogs-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 /* footer */
 footer {
@@ -529,11 +532,7 @@ footer .copyright p {
     font-size: 9px;
     padding: 6px 20px;
   }
-  .blogs .blogs-arrow .arro-btn {
-    position: absolute;
-    top: 20px;
-    left: 440px;
-  }
+
   .blogs .blog-body .card-footer .card-foo-btn {
     position: absolute;
     top: -12px;
@@ -558,6 +557,10 @@ footer .copyright p {
   .hero-banner {
     background-position: 0% 0%, 475px 0%;
     padding-bottom: 120px !important;
+  }
+  /* collasp btn */
+  .log-btn {
+    margin: 5px 220px;
   }
   /* about */
   .about-img {
@@ -683,11 +686,7 @@ footer .copyright p {
     margin: 0;
     display: inline-table;
   }
-  .blogs .blogs-arrow .arro-btn {
-    position: absolute;
-    top: 20px;
-    left: 315px;
-  }
+
   .blogs .blog-body .card-footer .card-foo-btn {
     position: absolute;
     top: -12px;
@@ -717,6 +716,10 @@ footer .copyright p {
   }
   .hero-btn {
     text-align: center;
+  }
+  /* collasp btn */
+  .log-btn {
+    margin: 5px 160px;
   }
 
   /* about */
@@ -903,6 +906,10 @@ footer .copyright p {
     left: -35px;
     max-width: 500px;
   }
+  /* collasp btn */
+  .log-btn {
+    margin: 5px 130px;
+  }
   .about-text p {
     font-size: 12px;
     line-height: 20px;
@@ -1002,7 +1009,12 @@ footer .copyright p {
 @media screen and (max-width: 475px) {
   /* herobanner */
   .image {
+    text-align: center;
     display: flex;
+  }
+  /* collasp btn */
+  .log-btn {
+    margin: 5px 90px;
   }
   /* medicine */
   .medicine .card {
@@ -1077,5 +1089,104 @@ footer .copyright p {
     position: absolute;
     top: -5px;
     left: 200px;
+  }
+}
+@media screen and (max-width: 430px) {
+  /* hero */
+  .image {
+    padding-left: 25px !important;
+  }
+  /* collasp btn */
+  .log-btn {
+    margin: 5px 90px;
+  }
+  /* about */
+  .about-img {
+    left: -10px;
+  }
+  /* vedio */
+  .vedio-cons .about-text {
+    padding: 10px 0px 10px 10px !important;
+    margin-top: 0 !important;
+  }
+  .vedio-cons {
+    background-position: 95% 100%;
+  }
+  /* choose */
+  .choose .body-row {
+    padding-left: 30px;
+  }
+  /* medicine */
+  .medicine .row {
+    margin-left: 10px;
+  }
+  /* service */
+  .service .service-text,
+  .service {
+    margin-bottom: 0 !important;
+  }
+  .service .service-text p {
+    margin-left: 30px !important;
+    margin-right: 0 !important;
+  }
+  .service-text .service-list {
+    margin-left: 115px;
+  }
+  /* expart */
+  .expart {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .expart .expart-card {
+    margin-left: 30px;
+  }
+  .expart .expart-card {
+    margin-bottom: 35px;
+  }
+  /* qulified */
+  .qulified .qulified-text p {
+    padding-left: 15px !important;
+  }
+  /* faq */
+  .faq {
+    margin-bottom: 0 !important;
+  }
+  .faq .faq-text .faq-btn {
+    text-align: center;
+  }
+  /* patient */
+  .patient .patient-body .patient-slide .sec,
+  .patient .patient-body .patient-slide .thi,
+  .patient .patient-body .patient-slide .first {
+    top: 515px;
+  }
+  .patient .patient-body .patient-slide .arrow {
+    top: 560px;
+    left: 298px;
+  }
+  /* blog */
+  .blogs {
+    margin-bottom: 0 !important;
+  }
+  /* hr */
+  .hr {
+    padding: 15px !important;
+  }
+  /* footer brand */
+  .fot-brand .foot-ser-card.foot-social {
+    margin-left: 15px;
+  }
+  .fot-brand .foot-ser-card .fot-brand-img img {
+    margin: 5px 0px 0 3px;
+  }
+  .fot-brand .foot-ser-card .foot-ser-img img {
+    width: 45%;
+  }
+  .fot-brand .foot-ser-card h6 {
+    text-align: center;
+    margin-left: 20px;
+  }
+  .fot-brand .contact-list {
+    margin-left: 0px;
   }
 }
