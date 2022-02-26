@@ -107,7 +107,7 @@ p {
   background-color: var(--btn-color);
   border: 1px solid var(--btn-color);
   padding: 8px 60px;
-
+  transition: 0.5s;
   margin-bottom: 30px;
 }
 .btn:hover {
@@ -132,6 +132,9 @@ p {
 nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+}
+.collapse ul li a:hover {
+  color: var(--clr-primary-5) !important;
 }
 /* hero banner */
 .hero-banner {
@@ -566,7 +569,7 @@ footer .copyright p {
   }
   /* collasp btn */
   .log-btn {
-    margin: 5px 220px;
+    margin: 5px 170px;
   }
   /* about */
   .about-img {
@@ -1088,7 +1091,7 @@ footer .copyright p {
   }
   /* collasp btn */
   .log-btn {
-    margin: 5px 90px;
+    margin: 5px 73px;
   }
   /* about */
   .about-img {
