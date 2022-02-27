@@ -35,3 +35,8 @@ function carousel() {
 }
 
 prevBtn.style.display = "block";
+
+
+// glider js
+
+

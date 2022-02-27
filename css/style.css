@@ -251,9 +251,6 @@ nav {
 .patient {
   position: relative;
 }
-/* .patient .patient-body {
-  position: relative;
-} */
 
 .patient .patient-body .card-body {
   max-width: 550px;
@@ -320,7 +317,63 @@ nav {
 /* slider */
 
 /* blog */
-.blogs .blog-body .card-footer .blog-btn {
+.blogs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  width: 95%;
+}
+.blogs .slider-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px auto 10px auto;
+  padding: 0 30px;
+}
+.blogs .slider-btn button {
+  position: static !important;
+  transform: translate(0, 0);
+  background-color: #2caee2;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border: 2px solid #2caee2;
+  border-radius: 50%;
+}
+.blogs .slider-btn button span {
+  font-weight: bold;
+  padding: 10px 15px 10px 10px;
+  position: relative;
+  text-decoration: none;
+}
+.blogs .slider-btn button span::before,
+.blogs .slider-btn button span::after {
+  border: 1px solid;
+  display: block;
+  height: 8px;
+  margin-top: -6px;
+  position: absolute;
+  transform: rotate(135deg);
+  right: 10px;
+  top: 50%;
+  width: 0;
+  content: "";
+}
+.blogs .slider-btn button span::after {
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+.blogs .slider-btn .glider-prev span {
+  transform: rotate(-180deg);
+}
+/* slider */
+.blogs .glider-contain .card-footer .blog-btn {
   font-size: 10px;
   border-radius: 62px;
   color: #fff;
@@ -330,34 +383,34 @@ nav {
   margin: 5px 0 5px 5px;
   display: inline-table;
 }
-.blogs .blog-body .card-footer .blog-btn:hover {
+.blogs .glider-contain .card-footer .blog-btn:hover {
   color: #fff;
   background-color: var(--clr-primary-5);
   border: 1px solid var(--clr-primary-5);
 }
-.blogs .blog-body .card-footer .color-p {
+.blogs .glider-contain .card-footer .color-p {
   font-size: 12px;
 }
-.blogs .blog-body .card-footer {
+.blogs .glider-contain .card-footer {
   position: relative;
 }
-.blogs .blog-body .card-footer .card-foo-btn {
+.blogs .glider-contain .card-footer .card-foo-btn {
   position: absolute;
   top: -12px;
   left: 126px;
 }
-.blogs .blog-body .card-footer p {
+.blogs .glider-contain .card-footer p {
   margin-bottom: 0;
 }
-.blogs .blog-body .card-body .color-p,
-.blogs .blog-body .card-footer .color-p {
+.blogs .glider-contain .card-body .color-p,
+.blogs .glider-contain .card-footer .color-p {
   color: var(--btn-color);
 }
-.blogs .blog-body .card {
+.blogs .glider-contain .card {
   border: none;
   padding: 10px;
 }
-.blogs .blog-body .card-footer {
+.blogs .glider-contain .card-footer {
   padding: 0 !important;
   background-color: #ffffff;
   border-top: none;
@@ -457,10 +510,7 @@ footer .copyright p {
 }
 @media screen and (max-width: 1399px) {
   /* patient */
-  /* .slider-container {
-    width: 79vw;
-    height: 48vh;
-  } */
+
   .patient .qutant-img .up {
     left: 540px;
   }
@@ -524,25 +574,29 @@ footer .copyright p {
     font-size: 12px !important;
   }
   /* blogs */
-  .blogs .blog-body .card-body {
+  .blogs .glider-contain .card-body {
     padding: 2px;
   }
-  .blogs .blog-body .card-footer p,
-  .blogs .blog-body .card-body p {
-    font-size: 10px;
+  .blogs .glider-contain .card-body p {
+    margin-bottom: 20px;
   }
-  .blogs .blog-body .card-body h6 {
+
+  .blogs .glider-contain .card-footer p,
+  .blogs .glider-contain .card-body p {
+    font-size: 15px;
+  }
+  .blogs .glider-contain .card-body h6 {
     font-size: 12px;
   }
-  .blogs .blog-body .card-footer {
+  .blogs .glider-contain .card-footer {
     margin-left: 0;
   }
-  .blogs .blog-body .card-footer .blog-btn {
+  .blogs .glider-contain .card-footer .blog-btn {
     font-size: 9px;
     padding: 6px 20px;
   }
 
-  .blogs .blog-body .card-footer .card-foo-btn {
+  .blogs .glider-contain .card-footer .card-foo-btn {
     position: absolute;
     top: -12px;
     left: 120px;
@@ -663,22 +717,26 @@ footer .copyright p {
     font-weight: bold;
   }
   /* blogs */
-  .blogs .blog-body .card-body .color-p,
-  .blogs .blog-body .card-footer .color-p {
+  .blogs .glider-contain .card-body .color-p,
+  .blogs .glider-contain .card-footer .color-p {
     margin-right: 5px;
     font-size: 8px !important;
   }
-  .blogs .blog-body .card {
+  .blogs .glider-contain .card {
     padding: 10px;
   }
-  .blogs .blog-body .card-footer .blog-btn {
+  .blogs .glider-contain .card-footer p,
+  .blogs .glider-contain .card-body p {
+    font-size: 12px;
+  }
+  .blogs .glider-contain .card-footer .blog-btn {
     font-size: 8px !important;
     padding: 6px 14px !important;
     margin: 0;
     display: inline-table;
   }
 
-  .blogs .blog-body .card-footer .card-foo-btn {
+  .blogs .glider-contain .card-footer .card-foo-btn {
     position: absolute;
     top: -12px;
     left: 80px;
@@ -716,6 +774,22 @@ footer .copyright p {
   .slider-container {
     width: 81vw;
     height: 25vh;
+  }
+  /* blogs */
+  .blogs .glider-contain .card-footer p,
+  .blogs .glider-contain .card-body p {
+    font-size: 19px;
+  }
+  .blogs .glider-contain .card-footer .blog-btn {
+    font-size: 8px !important;
+    padding: 8px 30px !important;
+    margin: 10px 0 0 100px;
+    display: inline-table;
+  }
+  .blogs .glider-contain .card-body .color-p,
+  .blogs .glider-contain .card-footer .color-p {
+    margin-right: 5px;
+    font-size: 15px !important;
   }
 }
 
@@ -853,30 +927,30 @@ footer .copyright p {
     font-weight: bold;
   }
   /* blog */
-  .blogs .blog-body .card-group {
+  .blogs .glider-contain .card-group {
     display: block;
   }
-  .blogs .blog-body .card-group .card {
+  .blogs .glider-contain .card-group .card {
     margin-bottom: 50px;
   }
-  .blogs .blog-body .card-group .card-body {
+  .blogs .glider-contain .card-group .card-body {
     padding: 10px;
   }
-  .blogs .blog-body .card-group .card-footer .color-p,
-  .blogs .blog-body .card-group .card-body .color-p {
+  .blogs .glider-contain .card-group .card-footer .color-p,
+  .blogs .glider-contain .card-group .card-body .color-p {
     font-size: 20px !important;
   }
-  .blogs .blog-body .card-group .card-footer .color-p {
+  .blogs .glider-contain .card-group .card-footer .color-p {
     margin-left: 10px;
   }
-  .blogs .blog-body .card-group .card-body p {
+  .blogs .glider-contain .card-group .card-body p {
     font-size: 20px;
     margin: 20px 0 20px 0;
   }
-  .blogs .blog-body .card-group .card-body h6 {
+  .blogs .glider-contain .card-group .card-body h6 {
     font-size: 25px;
   }
-  .blogs .blog-body .card-footer .blog-btn {
+  .blogs .glider-contain .card-footer .blog-btn {
     font-size: 15px !important;
     padding: 6px 40px !important;
     margin: 0;
@@ -886,10 +960,14 @@ footer .copyright p {
   .blogs .blogs-arrow .arro-btn {
     display: none;
   }
-  .blogs .blog-body .card-footer .card-foo-btn {
+  .blogs .glider-contain .card-footer .card-foo-btn {
     position: absolute;
     top: 0px;
     left: 260px;
+  }
+  .blogs .glider-contain .card-footer p,
+  .blogs .glider-contain .card-body p {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 680px) {
@@ -901,6 +979,19 @@ footer .copyright p {
   .patient .qutant-img .down {
     top: 720px;
     left: 400px;
+  }
+  /* blogs */
+  .blogs .glider-contain .card-footer p,
+  .blogs .glider-contain .card-body p {
+    font-size: 25px;
+  }
+  .blogs .glider-contain .card-body h6 {
+    font-size: 15px;
+  }
+  .blogs .glider-contain .card-body .color-p,
+  .blogs .glider-contain .card-footer .color-p {
+    margin-right: 5px;
+    font-size: 20px !important;
   }
 }
 @media screen and (max-width: 575px) {
@@ -992,11 +1083,14 @@ footer .copyright p {
   }
 
   /* blogs */
-  .blogs .blog-body .card-footer p {
+  .blogs .glider-contain .card-footer p {
     font-size: 5px !important;
   }
-  .blogs .blog-body .card-footer .blog-btn {
-    margin-left: 15px;
+
+  .blogs .glider-contain .card-footer .blog-btn {
+    font-size: 15px !important;
+    padding: 6px 30px !important;
+    margin-left: 7px;
   }
 }
 @media screen and (max-width: 475px) {
@@ -1038,30 +1132,10 @@ footer .copyright p {
     z-index: 1;
   }
 
-  /* .patient .patient-body .patient-slide .first {
-    position: absolute;
-    top: 540px;
-    left: 235px;
-  } */
-
   .patient .patient-body .patient-slide img {
     max-width: 10%;
   }
-  /* .patient .patient-body .patient-slide .sec {
-    position: absolute;
-    top: 540px;
-    left: 295px;
-  }
-  .patient .patient-body .patient-slide .thi {
-    position: absolute;
-    top: 540px;
-    left: 355px;
-  } */
-  /* .patient .patient-body .patient-slide .arrow {
-    position: absolute;
-    top: 595px;
-    left: 295px;
-  } */
+
   .patient .patient-body .card-body .card-text {
     margin: 20px 0 0 0 !important;
     font-size: 14px !important;
@@ -1072,16 +1146,20 @@ footer .copyright p {
     font-weight: bold;
   }
   /* blogs */
-  .blogs .blog-body .card-footer .color-p {
+  .blogs .glider-contain .card-footer .color-p {
     font-size: 15px !important;
   }
-  .blogs .blog-body .card-footer .blog-btn {
-    margin-left: 15px;
+  .blogs .glider-contain .card-footer .blog-btn {
+    margin-left: 0;
   }
-  .blogs .blog-body .card-footer .card-foo-btn {
+  .blogs .glider-contain .card-footer .card-foo-btn {
     position: absolute;
     top: -5px;
     left: 200px;
+  }
+  .blogs .glider-contain .card-footer p,
+  .blogs .glider-contain .card-body p {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 430px) {
@@ -1161,10 +1239,12 @@ footer .copyright p {
   .blogs {
     margin-bottom: 0 !important;
   }
-  .blogs .blog-body .card-footer .blog-btn {
+  .blogs .glider-contain .card-footer .blog-btn {
     margin-left: 0;
     font-size: 10px !important;
+    padding: 6px 17px !important;
   }
+
   /* hr */
   .hr {
     padding: 15px !important;
